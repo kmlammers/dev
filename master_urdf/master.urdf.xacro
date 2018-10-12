@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="master" >
+	   
+		
+	<link name="world"/>
+	
+	<!-- -->
+	<xacro:include filename="$(find schunk_hardware_config)/lwa/urdf/lwa.urdf.xacro" />	    
+	<!-- -->
+	<xacro:include filename="$(find rmp_description)/robots/rmp440le.urdf.xacro" /> 
+	  
+	<joint name="arm_base_connector" type="fixed">
+      <child link="arm_base_link" />
+      <parent link="world"/>
+	  
+    </joint>
+	
+</robot>

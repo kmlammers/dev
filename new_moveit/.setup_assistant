@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: schunk_hardware_config
+    relative_path: lwa/urdf/new.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/lwa.srdf
+  CONFIG:
+    author_name: kyle
+    author_email: asdasdf@asdfasdf.com
+    generated_timestamp: 1536793159
